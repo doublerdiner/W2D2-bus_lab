@@ -20,4 +20,8 @@ class Bus:
         self.passengers.clear()
         # del self.passengers[:] - Alternative Solution
 
+    def pick_up_from_stop(self, bus_stop):
+        for passenger in bus_stop.queue:
+            self.passengers.append(passenger)
+        bus_stop.queue.clear()
         
